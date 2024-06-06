@@ -1,0 +1,111 @@
+body {
+    font-family: "Consolas", sans-serif;
+    background-color: #E7E4E4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: red;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Importante per nascondere il testo fuori dal contenitore */
+}
+
+.titoloanimato {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes titoloanimato {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.titoloanimato h1 {
+    display: inline-block;
+    padding-left: 100%; /* Inizializza il testo fuori dallo schermo */
+    animation: titoloanimato 12s linear infinite;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.immaginedadi {
+    display: block;
+    margin: 0 auto; 
+    max-width: 100%; /* Assicura che l'immagine non esca fuori dal contenitore */
+    height: auto; /* Mantiene le proporzioni */
+}
+
+/* Stili per il testo */
+text {
+    flex: 1; /* Flessibilità per adattarsi allo spazio rimanente */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 150%;
+    margin-bottom: 5px;
+}
+
+input[type="number"], input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: red;
+    font-size: 150%;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 25px;
+}
+
+a {
+    font-size: 25px;
+}
+
+footer {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+ul {
+    font-weight: bold;
+    font-size: 150%;
+    color: red;
+}
+
+li {
+    margin-bottom: 3px;
+}

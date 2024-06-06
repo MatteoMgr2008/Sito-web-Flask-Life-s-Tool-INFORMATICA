@@ -1,0 +1,107 @@
+body {
+    font-family: "Consolas", sans-serif;
+    background-color: #E7E4E4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Importante per nascondere il testo fuori dal contenitore */
+}
+
+.titoloanimato {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes titoloanimato {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.titoloanimato h1 {
+    display: inline-block;
+    padding-left: 100%; /* Inizializza il testo fuori dallo schermo */
+    animation: titoloanimato 12s linear infinite;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    text-align: justify;
+}
+
+/* Stili per il testo */
+text {
+    flex: 1; /* Flessibilità per adattarsi allo spazio rimanente */
+}
+
+.listatooldisponibili {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.listatooldisponibili button {
+    font-size: 20px;
+}
+
+.titoloprincipale {
+    text-align: center;
+}
+
+.immagineprincipale {
+    display: block;
+    margin: 0 auto; 
+    max-width: 100%; /* Assicura che l'immagine non esca fuori dal contenitore */
+    height: auto; /* Mantiene le proporzioni */
+    width: 45%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 25px;
+    text-align: justify;
+}
+
+a {
+    font-size: 25px;
+}
+
+footer {
+    font-size: 25px;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
