@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-listatooldisponibili.css') }}">
+    <link rel="icon" href="static\images\favicon1.ico" type="image/x-icon">
+    <title>Lista dei tool disponibili</title>
+</head>
+<body>
+    <header>
+        <div class="titoloanimato">
+            <h1>Tool disponibili</h1>
+        </div>
+    </header>
+    <section>
+        <img src="{{ url_for('static', filename='images/immagine toolbox.jpg') }}" alt="Tool disponibili" class="immaginetoolbox" title="Tool disponibili">
+        <br>
+        <h1 class="titoloprincipale">LISTA DEI TOOL DISPONIBILI</h1>
+        <p class="paragrafoprincipale">N.B.: In caso di prese in giro da parte di terzi o senso di stupidità, il creatore non si prende alcuna responsabilità durante l'utilizzo dei tool. Se ti credi troppo intelligente o comunque non ti pensi così stupido non usare questi tool.</p>
+    </section>
+    <div class="listagiochidisponibili">
+        <h1>Tool matematici:</h1>
+        <br>
+        <a href="{{ url_for('calcolo_della_media_dei_numeri') }}" class="calcolodellamediadeinumeri"><button>Calcolo della media dei numeri</button></a>
+        <p> </p>
+        <a href="{{ url_for('calcolo_del_quadrato_dei_numeri') }}" class="calcolodelquadratodeinumeri"><button>Calcolo del quadrato dei numeri</button></a>
+        <p> </p>
+        <a href="{{ url_for('verifica_della_parita_o_disparita_di_un_numero') }}" class="verificadellaparitaodisparitadiunnumero"><button>Verifica della parità o disparità di un numero</button></a>
+        <p> </p>
+        <a href="{{ url_for('calcolo_del_fattoriale') }}" class="calcolodelfattoriale"><button>Calcolo del fattoriale</button></a>
+        <p> </p>
+        <h1>Tool dei giochi interattivi:</h1>
+        <br>
+        <a href="{{ url_for('gioco_del_lancio_del_dado') }}" class="giocodellanciodeldado"><button>Gioco del lancio del dado</button></a>
+        <p> </p>
+        <a href="{{ url_for('gioco_dell_indovinello') }}" class="giocodellindovinello"><button>Gioco dell'indovinello</button></a>
+        <p> </p>
+        <a href="{{ url_for('gioco_del_morra_cinese') }}" class="giocodelmorracinese"><button>Gioco del morra cinese</button></a>
+    </div>
+    <footer>
+        SUPPORT THE DEVELOPER, IF YOU WANT
+        <a href="https://www.buymeacoffee.com/MatteoMagrino" target="_blank">BUY ME A COFFEE</a>
+    </footer>
+    <br>
+</body>
+</html>

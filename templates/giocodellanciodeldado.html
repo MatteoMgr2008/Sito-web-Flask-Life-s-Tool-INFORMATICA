@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-giocodellanciodeldado.css') }}">
+    <script src="{{ url_for('static', filename='script-giocodellanciodeldado.js') }}"></script>
+    <link rel="icon" href="static\images\favicon2.ico" type="image/x-icon">
+    <title>Gioco del lancio del dado</title>
+</head>
+<body>
+    <header>
+        <div class="titoloanimato">
+            <h1>Gioco del lancio del dado</h1>
+        </div>
+    </header>
+    <img src="{{ url_for('static', filename='images/immagine dadi.jpg') }}" alt="Gioco del lancio del dado" class="immaginedadi" title="Gioco del lancio del dado">
+    <br>
+    <br>
+    <div class="giocodellanciodeldado" id="giocodellanciodeldado">
+        <form method="POST">
+            <label for="numero_lanci_dadi">Inserire qui il numero di dadi che si desidera lanciare:</label>
+            <input type="number" name="numero_lanci_dadi" min="1" required>
+            <br>
+            <label for="numero_faccie_dadi">Inserire qui il numero di faccie di cui deve avere ogni dado:</label>
+            <input type="number" name="numero_faccie_dadi" min="2" required>
+            <br>
+            <button type="submit">Lancia il/i dado/i!</button>
+        </form>
+        {% if message %}
+        <h2>I risultati dei lanci dei dadi sono:</h2>
+        <ul>
+            {% for numero in message %}
+                <li>{{ numero }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    </div>
+    <br>
+    <footer>
+        SUPPORT THE DEVELOPER, IF YOU WANT
+        <a href="https://www.buymeacoffee.com/MatteoMagrino" target="_blank">BUY ME A COFFEE</a>
+    </footer>
+    <br>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-index.css') }}">
+    <link rel="icon" href="static\images\favicon1.ico" type="image/x-icon">
+    <title>Life's Tool: Make Your Life Simplify (ITA)</title>
+</head>
+<body>
+    <header>
+        <div class="titoloanimato">
+            <h1>Life's Tool: Make Your Life Simplify</h1>
+        </div>
+    </header>
+    <section>
+        <img src="{{ url_for('static', filename='images/immagine principale.jpg') }}" alt="Immagine Flask" class="immagineprincipale" title="Immagine Flask">
+        <br>
+        <h1 class="titoloprincipale">Il progetto</h1>
+        <p>Questo progetto, creato da un sviluppatore italiano, mira a fornire all'utente finale dei tool per facilitargli la vita quotidiana. Tutti questi tool sono stati creati attraverso il linguaggio di programmazione Python (con la libreria Flask, che ho utilizzato per ovviare a Javascript) e tutto il codice del sito e dei tool è disponibile su GitHub a questo link:</p>
+        <a href="https://github.com/MatteoMgr2008" target="_blank">www.github.com/MatteoMgr2008</a>
+    </section>
+    <div class="listatooldisponibili">
+        <a href="{{ url_for('lista_tool_disponibili') }}"><button>Vai alla lista dei tool</button></a>
+    </div>
+    <footer>
+        SUPPORT THE DEVELOPER, IF YOU WANT
+        <a href="https://www.buymeacoffee.com/MatteoMagrino" target="_blank">BUY ME A COFFEE</a>
+    </footer>
+    <br>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-calcolodellamediadeinumeri.css') }}">
+    <link rel="icon" href="static\images\favicon3.ico" type="image/x-icon">
+    <title>Calcolo della media dei numeri</title>
+</head>
+<body>
+    <header>
+        <div class="titoloanimato">
+            <h1>Calcolo della media dei numeri</h1>
+        </div>
+    </header>
+    <img src="{{ url_for('static', filename='images/immagine calcolatrice.jpg') }}" alt="Calcolo della media dei numeri" class="immaginecalcolatrice" title="Calcolo della media dei numeri">
+    <br>
+    </header>
+    <div class="calcolodellamediadeinumeri">
+        <form method="POST">
+            <label for="numeri_lista">Inserire qui i numeri di cui si desidera sapere la media totale, separati da uno spazio (es.: 3 7 12):</label>
+            <input type="text" id="numeri_lista" name="numeri_lista">
+            <button type="submit">Calcola la media!</button>
+        </form>
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+    </div>
+    <br>
+    <footer>
+        SUPPORT THE DEVELOPER, IF YOU WANT
+        <a href="https://www.buymeacoffee.com/MatteoMagrino" target="_blank">BUY ME A COFFEE</a>
+    </footer>
+    <br>
+</body>
+</html>
