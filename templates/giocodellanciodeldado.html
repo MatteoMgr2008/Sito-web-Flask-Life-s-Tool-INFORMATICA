@@ -15,15 +15,14 @@
         </div>
     </header>
     <img src="{{ url_for('static', filename='images/immagine dadi.jpg') }}" alt="Gioco del lancio del dado" class="immaginedadi" title="Gioco del lancio del dado">
-    <br>
-    <br>
     <div class="giocodellanciodeldado" id="giocodellanciodeldado">
         <form method="POST">
+            <h2 class="indicazioneprincipale">È POSSIBILE INSERIRE SOLO NUMERI INTERI NEI CAMPI SELEZIONABILI SOTTOSTANTI</h2>
             <label for="numero_lanci_dadi">Inserire qui il numero di dadi che si desidera lanciare:</label>
-            <input type="number" name="numero_lanci_dadi" min="1" required>
+            <input type="number" name="numero_lanci_dadi" min="1" max="1000" required>
             <br>
             <label for="numero_faccie_dadi">Inserire qui il numero di faccie di cui deve avere ogni dado:</label>
-            <input type="number" name="numero_faccie_dadi" min="2" required>
+            <input type="number" name="numero_faccie_dadi" min="2" max="1000" required>
             <br>
             <button type="submit">Lancia il/i dado/i!</button>
         </form>
