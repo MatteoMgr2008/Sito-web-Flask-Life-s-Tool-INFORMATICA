@@ -17,12 +17,16 @@ def home_page():
 def lista_tool_disponibili():
     return render_template("listatooldisponibili.html")
 
+def converti_numero_con_virgola(numero_stringa): # Funzione di Python normale, non è una funzione "app.route" di Flask
+    numero_stringa = numero_stringa.replace(',', '.') # Sostituisce la virgola con il punto
+    return float(numero_stringa)
+
 @app.route("/calcolodellamediadeinumeri", methods=["GET", "POST"])
 def calcolo_della_media_dei_numeri():
     messaggio = None
     if request.method == "POST":
         lista_numeri_scelti = request.form["numeri_lista"].split()
-        lista_numeri_scelti = [int(numero) for numero in lista_numeri_scelti]
+        lista_numeri_scelti = [converti_numero_con_virgola(numero) for numero in lista_numeri_scelti]
         if len(lista_numeri_scelti) > 0:
             media_numeri_lista = sum(lista_numeri_scelti) / len(lista_numeri_scelti)
             messaggio = f"La media dei numeri {lista_numeri_scelti} è: {media_numeri_lista}"
