@@ -99,3 +99,8 @@ footer {
 h2 {
     font-size: 150%;
 }
+
+.indicazioneprincipale {
+    color: blue;
+    text-align: center;
+}
